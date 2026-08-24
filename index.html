@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VOG HAIR 천호역점 | 천호역 미용실</title>
+<meta name="description" content="천호역 프리미엄 헤어살롱 VOG HAIR 천호역점. 디자이너 소개, 시술 사진, 고객 후기, 가격 안내, 오시는 길.">
+<meta name="robots" content="index,follow">
+<!-- ⚠️ TODO: 천호역점 실제 배포 도메인/저장소 주소로 교체 -->
+<link rel="canonical" href="https://ghghdi03.github.io/vog-hair-cheonho/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="VOG HAIR 천호역점 | 천호역 미용실">
+<meta property="og:description" content="천호역 프리미엄 헤어살롱. 디자이너·시술사진·후기·가격·오시는 길.">
+<meta property="og:url" content="https://ghghdi03.github.io/vog-hair-cheonho/">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --white:#ffffff;
+    --grey:#ececec;
+    --black:#2b2620;
+    --ink:#1a1a1a;
+    --cream-text:#f5f2ea;
+    --accent:#a9824a;
+    --wm-light:rgba(0,0,0,.06);
+    --wm-dark:rgba(174,204,196,.18);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    background:var(--white); color:var(--ink);
+    font-family:'Gowun Dodum',-apple-system,sans-serif; font-weight:400;
+    line-height:1.9; -webkit-font-smoothing:antialiased; word-break:keep-all;
+    overflow-x:hidden;
+  }
+  img{display:block; max-width:100%;}
+  a{color:inherit; text-decoration:none;}
+  button{font:inherit; cursor:pointer; background:none; border:none; color:inherit;}
+  .container{max-width:640px; margin:0 auto; padding:0 22px; position:relative;}
+  .page{max-width:560px; margin:0 auto; position:relative; background:var(--white);}
+  @media(min-width:600px){
+    .page{box-shadow:0 0 0 1px rgba(26,26,26,.1); min-height:100vh;}
+  }
+  .serif-it{font-family:'Plus Jakarta Sans',sans-serif; font-style:normal; font-weight:600;}
+  .serif-it b, .serif-it strong{font-weight:700;}
+  .kr-title{font-family:'Gowun Dodum',sans-serif; font-style:normal; font-weight:400;}
+  .kr-title b, .kr-title strong{font-weight:400;}
+
+  .placeholder-img{
+    background:repeating-linear-gradient(135deg,#e2e2e2,#e2e2e2 10px,#ececec 10px,#ececec 20px);
+    border:1px dashed rgba(26,26,26,.25);
+    display:flex; align-items:center; justify-content:center;
+    color:#9c9186; font-size:11px; letter-spacing:.1em; text-transform:uppercase; text-align:center;
+  }
+  .dark .placeholder-img{
+    background:repeating-linear-gradient(135deg,#1c1c1c,#1c1c1c 10px,#242424 10px,#242424 20px);
+    border-color:rgba(245,242,234,.2); color:rgba(245,242,234,.4);
+  }
+
+  /* ---------- 매거진 라벨/캡션 ---------- */
+  .mag-label{
+    font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; font-size:10.5px;
+    letter-spacing:.14em; text-transform:uppercase; color:var(--accent);
+  }
+
+  /* ================= 01 TOP BAR ================= */
+  .topbar{
+    display:flex; align-items:center;
+    padding:16px 20px; font-size:10px; letter-spacing:.12em; text-transform:uppercase;
+    font-weight:700; color:var(--ink); border-bottom:1px solid rgba(26,26,26,.12);
+    background:var(--white);
+  }
+
+  /* ================= 02 HERO ================= */
+  .hero-mag{position:relative;}
+  .hero-photo{aspect-ratio:4/5; width:100%;}
+  .hero-photo img{width:100%; height:100%; object-fit:cover;}
+  .hero-text{padding:32px 22px 48px; text-align:center; background:var(--white);}
+  .hero-text h1{font-size:clamp(30px,8vw,44px); line-height:1.15; margin-bottom:4px;}
+  .hero-text h1.ko{font-size:clamp(22px,6vw,30px); margin-bottom:18px; color:var(--ink);}
+  .hero-copy{font-size:13px; color:#4a4438; max-width:34ch; margin:0 auto; line-height:1.9;}
+  .hero-lead{font-size:16px; font-weight:400; margin-bottom:10px; color:var(--ink);}
+
+  /* ================= 03 DARK BRAND + EVENT ================= */
+  .dark-section{background:var(--black); color:var(--cream-text); position:relative; overflow:hidden; padding:96px 0;}
+  .dark-section.dark-intro{padding:110px 0;}
+  .dark-section .mag-label{color:rgba(245,242,234,.55);}
+  .dark-section .section-sub{position:relative; z-index:1;}
+  .watermark{
+    position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+    font-family:'Plus Jakarta Sans',sans-serif; font-style:normal; font-weight:700;
+    font-size:min(19vw,124px); color:var(--wm-dark); pointer-events:none; z-index:0;
+    line-height:1.05; text-align:center; white-space:nowrap; letter-spacing:.01em;
+  }
+  .brand-philo{
+    position:relative; z-index:1; text-align:center; font-size:14px; line-height:2;
+    color:rgba(245,242,234,.88); max-width:32ch; margin:0 auto;
+  }
+  .philo-lead{font-size:17px; margin-bottom:16px; color:var(--cream-text);}
+  .brand-philo p + p{margin-top:16px;}
+  .event-mag{padding:64px 0; background:var(--grey);}
+  .event-list{max-width:420px; margin:0 auto; display:flex; flex-direction:column; gap:14px; padding:0 22px;}
+  .event-card{
+    padding:22px 22px; border:1px solid rgba(26,26,26,.15); text-align:center; background:var(--white);
+  }
+  .event-num{font-size:10px; letter-spacing:.14em; color:var(--accent); margin-bottom:10px; text-transform:uppercase; display:block;}
+  .event-title{font-family:'Gowun Dodum',sans-serif; font-style:normal; font-weight:400; font-size:19px; margin-bottom:10px; line-height:1.4; color:var(--ink);}
+  .event-detail{font-size:12.5px; color:#4a4438; line-height:1.85;}
+  .event-note{text-align:center; font-size:10.5px; color:#9c9186; margin-top:18px;}
+  .event-btn{
+    display:inline-flex; align-items:center; gap:8px; background:transparent; color:var(--ink);
+    border:1px solid var(--ink); border-radius:999px;
+    padding:12px 26px; font-size:12px; font-weight:700; letter-spacing:.06em; text-transform:uppercase;
+    transition:background .25s ease, color .25s ease; margin:22px auto 0;
+  }
+  .event-btn:hover{background:var(--ink); color:var(--white);}
+  .event-btn-wrap{display:flex; justify-content:center; padding:0 22px;}
+
+  /* ================= 원형 회전 스탬프 ================= */
+  .stamp-wrap{display:flex; justify-content:center; padding:40px 0;}
+  .stamp-wrap.on-dark{color:rgba(245,242,234,.55);}
+  .stamp-wrap.on-light{color:rgba(26,26,26,.35);}
+  .stamp-svg{width:84px; height:84px; animation:spin 20s linear infinite;}
+  .stamp-svg.small{width:64px; height:64px;}
+  @keyframes spin{ to{ transform:rotate(360deg); } }
+  .stamp-center{
+    position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+    width:6px; height:6px; border-radius:50%; background:currentColor;
+  }
+
+  /* ================= 04 COLLECTION INTRO ================= */
+  .collection-intro{padding:64px 22px; text-align:center; background:var(--grey);}
+  .collection-intro h2{font-size:clamp(24px,6.4vw,32px); line-height:1.5;}
+  .collection-intro h2 span{display:block;}
+
+  /* ================= 콜라주 그리드 (공용) ================= */
+  .d-group{padding:0 0 8px;}
+  .d-label{font-family:'Plus Jakarta Sans',sans-serif; font-style:normal; font-weight:600; font-size:15px; color:var(--accent); margin-bottom:8px;}
+  .d-sub{font-size:18px; font-weight:700; margin-bottom:8px;}
+  .d-desc{font-size:12.5px; color:#5c554a; max-width:38ch; margin-bottom:28px;}
+
+  .collage-grid{
+    position:relative; display:grid; grid-template-columns:1fr; gap:10px 12px;
+    padding:0 22px 8px;
+  }
+  .collage-item{position:relative; display:block;}
+  .collage-photo{position:relative; overflow:hidden;}
+  .collage-photo img{width:100%; height:100%; object-fit:cover; transition:transform .5s ease;}
+  .collage-item:hover .collage-photo img{transform:scale(1.04);}
+  .collage-item.a{grid-column:span 1;}
+  .collage-item.a .collage-photo{aspect-ratio:3/4;}
+  .collage-item.b{grid-column:span 1; margin-top:28px;}
+  .collage-item.b .collage-photo{aspect-ratio:1/1;}
+  .collage-item.c{grid-column:1 / -1; width:70%; justify-self:center; margin-top:10px;}
+  .collage-item.c .collage-photo{aspect-ratio:4/5;}
+  .collage-cap{
+    display:flex; align-items:center; gap:5px; margin-top:8px;
+    font-size:11px; font-weight:700; letter-spacing:.04em; text-transform:uppercase;
+  }
+  .collage-cap .arrow{transition:transform .25s ease;}
+  .collage-item:hover .collage-cap .arrow{transform:translateX(4px);}
+
+  .gallery-grid .collage-cap{color:#5c554a; font-weight:500; text-transform:none; letter-spacing:0;}
+
+  .style-grid{display:grid; grid-template-columns:1fr; gap:10px; padding:0 22px 8px;}
+  .style-item{position:relative; display:block; aspect-ratio:4/5; overflow:hidden;}
+  .style-item .placeholder-img, .style-item img{position:absolute; inset:0; width:100%; height:100%;}
+  .style-item img{object-fit:cover; transition:transform .5s ease;}
+  .style-item:hover img{transform:scale(1.05);}
+  .style-cap{
+    position:absolute; left:0; right:0; bottom:0; z-index:1; margin:0;
+    padding:22px 12px 10px; background:linear-gradient(180deg, rgba(26,22,18,0) 30%, rgba(26,22,18,.6) 100%);
+    color:#fff; font-size:12px; font-weight:500; letter-spacing:.02em; text-align:left;
+  }
+  @media(min-width:600px){
+    .style-grid{grid-template-columns:repeat(3,1fr);}
+  }
+
+  .designers{background:var(--white); padding-top:40px;}
+  .gallery{background:var(--grey); padding-bottom:8px;}
+
+  /* ================= 07 REVIEWS ================= */
+  .reviews-mag{padding:64px 0; background:var(--white);}
+  .section-sub{text-align:center; margin-bottom:32px; padding:0 22px;}
+  .section-sub .mag-label{display:block; margin-bottom:6px;}
+  .section-sub h2{font-size:26px;}
+  .review-scroll{display:flex; gap:14px; overflow-x:auto; padding:4px 22px 12px; scroll-snap-type:x mandatory;}
+  .review-card{
+    flex:none; width:240px; scroll-snap-align:start; background:#fff; border:1px solid rgba(26,26,26,.1);
+    padding:20px; font-size:12.5px; line-height:1.85;
+  }
+  .review-stars{color:var(--accent); font-size:13px; margin-bottom:10px; letter-spacing:2px; display:flex; align-items:center; justify-content:space-between;}
+  .review-source{font-family:'Plus Jakarta Sans',sans-serif; font-size:9px; font-weight:700; letter-spacing:.08em; color:#9c9186;}
+
+  /* ================= 08 PRICE ================= */
+  .price-mag{padding:64px 0; background:var(--grey);}
+  .price-tabs{display:flex; gap:8px; padding:0 22px; margin-bottom:28px;}
+  .price-tab{
+    flex:1; padding:11px 6px; text-align:center; font-family:'Plus Jakarta Sans',sans-serif;
+    font-size:11.5px; font-weight:600; letter-spacing:.04em; text-transform:uppercase;
+    border:1px solid rgba(26,26,26,.3); background:var(--white); color:var(--ink);
+    transition:background .2s ease, color .2s ease, border-color .2s ease;
+  }
+  .price-tab.active{background:var(--ink); color:var(--white); border-color:var(--ink);}
+  .price-panels{padding:0 22px;}
+  .price-panel{display:none;}
+  .price-panel.active{display:block;}
+  .price-row{display:flex; align-items:baseline; gap:8px; padding:9px 0; font-size:13px;}
+  .price-row .leader{flex:1; border-bottom:1px dotted rgba(26,26,26,.35); margin-bottom:4px;}
+  .price-row .val{font-weight:700; white-space:nowrap;}
+  .price-subnote{font-size:10.5px; color:#9c9186; margin:16px 0 6px; font-style:italic;}
+  .price-note{font-size:10.5px; color:#9c9186; margin-top:10px;}
+
+  /* ================= 09 MAP ================= */
+  .map-mag{padding:64px 0; background:var(--white);}
+  .map-box{
+    display:block; width:calc(100% - 44px); margin:0 22px; aspect-ratio:16/9;
+    overflow:hidden; border:1px solid rgba(26,26,26,.15);
+  }
+  .map-box iframe{width:100%; height:100%; border:0; display:block;}
+  .map-addr{padding:20px 22px 0; font-size:13px; color:#4a4438; line-height:2; text-align:center;}
+  .info-list{padding:24px 22px 0; max-width:420px; margin:0 auto;}
+  .info-row{padding:16px 0; border-top:1px solid rgba(26,26,26,.12); text-align:left;}
+  .info-row:last-child{border-bottom:1px solid rgba(26,26,26,.12);}
+  .info-label{font-size:10.5px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--accent); margin-bottom:6px; display:block;}
+  .info-value{font-size:13px; color:#4a4438; line-height:1.85;}
+  .btn-direction{
+    display:flex; align-items:center; justify-content:center; gap:8px; margin:20px 22px 0;
+    border:1px solid var(--ink); border-radius:999px; padding:14px; font-size:12.5px; font-weight:700; letter-spacing:.05em;
+    transition:background .25s ease, color .25s ease;
+  }
+  .btn-direction:hover{background:var(--ink); color:var(--white);}
+
+  /* ================= 10 FOOTER ================= */
+  .mag-footer{background:var(--black); color:var(--cream-text); padding:48px 22px 32px; text-align:center;}
+  .f-brand{font-size:20px; margin-bottom:18px;}
+  .f-brand .en{font-family:'Plus Jakarta Sans',sans-serif; font-style:normal; font-weight:600;}
+  .f-brand .kr{font-family:'Gowun Dodum',sans-serif; font-weight:400;}
+  .f-sns{display:flex; justify-content:center; gap:16px; margin-bottom:24px;}
+  .f-sns a{width:34px; height:34px; border:1px solid rgba(245,242,234,.3); border-radius:50%; display:flex; align-items:center; justify-content:center;}
+  .f-copy{font-size:10.5px; color:rgba(245,242,234,.45); letter-spacing:.02em;}
+
+  /* ================= 모달 / 라이트박스 ================= */
+  .overlay{
+    position:fixed; inset:0; background:rgba(17,17,17,.82); display:none; align-items:center; justify-content:center;
+    padding:24px; z-index:100;
+  }
+  .overlay.open{display:flex;}
+  .overlay-panel{
+    background:var(--white); max-width:400px; width:100%; max-height:86vh; overflow-y:auto;
+    padding:28px 24px; position:relative;
+  }
+  .overlay-close{
+    position:absolute; top:14px; right:14px; width:30px; height:30px; border:1px solid rgba(26,26,26,.3);
+    border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:14px;
+  }
+  .overlay-photo{aspect-ratio:3/4; width:100%; margin-bottom:18px; overflow:hidden;}
+  .overlay-photo img{width:100%; height:100%; object-fit:cover;}
+  .overlay-panel h3{font-family:'Gowun Dodum',sans-serif; font-style:normal; font-weight:400; font-size:22px; margin-bottom:4px;}
+  .overlay-role{font-size:11px; color:var(--accent); font-weight:700; letter-spacing:.08em; text-transform:uppercase; margin-bottom:16px;}
+  .overlay-panel p{font-size:13px; color:#4a4438; margin-bottom:10px;}
+  .overlay-panel ul{list-style:none; font-size:12.5px; color:#4a4438; margin-bottom:14px;}
+  .overlay-panel li{padding:4px 0; border-bottom:1px dotted rgba(26,26,26,.2);}
+  .p-tags{font-size:11.5px; color:var(--accent); font-weight:700; line-height:1.7; margin-bottom:10px;}
+  .p-msg{font-size:13px; color:#3a342c; line-height:1.85; margin-bottom:14px;}
+  .p-promo{border:1px solid var(--accent); padding:14px; margin-bottom:14px; font-size:12.5px; line-height:1.8;}
+  .p-promo .price-old{text-decoration:line-through; color:#9c9186; margin-right:6px;}
+  .p-promo .price-new{color:var(--accent); font-weight:700;}
+  .p-awards{font-size:11.5px; color:#3a342c; line-height:1.85; margin-bottom:14px;}
+  .p-section-title{font-family:'Plus Jakarta Sans',sans-serif; font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--accent); margin:16px 0 8px;}
+  .p-closing{font-family:'Gowun Dodum',sans-serif; font-style:normal; font-weight:400; font-size:13px; color:var(--ink); margin-top:14px; line-height:1.7;}
+  .modal-book-btn{
+    display:flex; align-items:center; justify-content:center; margin-top:20px; border-radius:999px;
+    background:var(--accent); color:#fff; padding:14px; font-size:13px; font-weight:700;
+    letter-spacing:.04em; transition:opacity .25s ease;
+  }
+  .modal-book-btn:hover{opacity:.85;}
+
+  .lightbox-panel{max-width:400px;}
+  .lightbox-panel .overlay-photo{aspect-ratio:4/5;}
+  .lightbox-panel h3{font-family:'Gowun Dodum',sans-serif; font-size:20px; margin-bottom:16px;}
+  .fit-row{margin-bottom:14px;}
+  .fit-row:last-child{margin-bottom:0;}
+  .fit-label{display:block; font-size:10.5px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--accent); margin-bottom:4px;}
+  .fit-row p{font-size:13px; color:#4a4438; margin:0; line-height:1.7;}
+
+  @media(min-width:640px){
+    .collage-grid{grid-template-columns:repeat(3,1fr);}
+    .collage-item.c{width:100%; grid-column:span 1; margin-top:40px;}
+    .collage-item.b{margin-top:56px;}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ================= 01 TOP BAR ================= -->
+  <div class="topbar">
+    <span>VOG HAIR</span>
+  </div>
+
+  <!-- ================= 02 HERO ================= -->
+  <section class="hero-mag">
+    <div class="hero-photo"><img src="images/hero.png" alt="VOG HAIR 천호역점" loading="eager"></div>
+    <div class="hero-text">
+      <h1><span class="serif-it">VOG HAIR</span> <span class="kr-title">천호역점</span></h1>
+      <h1 class="ko kr-title">프리미엄 헤어살롱</h1>
+      <p class="hero-lead">당신의 일상까지 고려한 섬세한 디자인</p>
+      <p class="hero-copy">VOG HAIR 천호역점은 정교한 상담과 전문적인 디자인을 바탕으로 시간이 지나도 자연스럽게 이어지는 아름다움을 완성합니다.</p>
+    </div>
+  </section>
+
+  <!-- ================= 03a DARK — 브랜드 소개 ================= -->
+  <section class="dark-section dark dark-intro">
+    <span class="watermark" aria-hidden="true">COLOR<br>YOUR<br>LIFE</span>
+    <div class="brand-philo">
+      <p class="philo-lead">취향을 이해하고, 어울림을 제안합니다</p>
+      <p>고객님의 취향과 고유한 분위기를 존중하며<br>전문가의 섬세한 시선으로 한층 더 완성도 높은 스타일을 제안합니다.</p>
+      <p>단순한 변화를 넘어, 고객님의 매력이 자연스럽게 드러나는 것.<br>VOG HAIR 천호역점이 추구하는 디자인의 기준입니다.</p>
+    </div>
+  </section>
+
+  <div class="stamp-wrap on-light">
+    <svg class="stamp-svg" viewBox="0 0 100 100">
+      <defs><path id="circle1" d="M50,50 m-40,0 a40,40 0 1,1 80,0 a40,40 0 1,1 -80,0"/></defs>
+      <text font-size="7.2" letter-spacing="2" fill="currentColor" font-family="'Gowun Dodum',sans-serif" font-weight="400">
+        <textPath href="#circle1">VOG HAIR · 천호역점 · DESIGNER · VOG HAIR · 천호역점 · DESIGNER ·</textPath>
+      </text>
+    </svg>
+  </div>
+
+  <!-- ================= 04 COLLECTION INTRO ================= -->
+  <section class="collection-intro">
+    <h2 class="serif-it" style="font-size:clamp(26px,7vw,34px);">OUR DESIGNERS</h2>
+    <p style="margin:18px auto 0; font-size:17px; font-weight:400; color:var(--ink);">당신의 아름다움을 이해하는 전문가</p>
+    <p class="d-desc" style="margin:12px auto 0; max-width:34ch; text-align:center;">정교한 상담과 전문적인 디자인을 바탕으로<br>고객님의 고유한 매력을 완성합니다.</p>
+  </section>
+
+  <!-- ================= 05 DESIGNERS ================= -->
+  <section class="designers">
+    <div class="d-group">
+      <div class="collage-grid">
+        <a class="collage-item a" href="#" data-modal="designer" data-name="도하" data-role="대표원장" data-booking="https://m.booking.naver.com/booking/13/bizes/43073/items/3868713?area=pll&amp;lang=ko&amp;theme=place">
+          <div class="collage-photo"><img src="images/designers/도하.png" alt="도하 대표원장" loading="lazy"></div>
+          <p class="collage-cap">· 도하 대표원장 <span class="arrow">→</span></p>
+        </a>
+        <a class="collage-item a" href="#" data-modal="designer" data-name="주영" data-role="점장" data-booking="https://m.booking.naver.com/booking/13/bizes/43073/items/2689895?area=pll&amp;lang=ko&amp;theme=place">
+          <div class="collage-photo"><img src="images/designers/주영.png" alt="주영 점장" loading="lazy"></div>
+          <p class="collage-cap">· 주영 점장 <span class="arrow">→</span></p>
+        </a>
+        <a class="collage-item a" href="#" data-modal="designer" data-name="은빈" data-role="원장" data-booking="https://m.booking.naver.com/booking/13/bizes/43073/items/1506735?theme=place&amp;tab=details&amp;lang=ko&amp;area=pll">
+          <div class="collage-photo"><img src="images/designers/은빈.png" alt="은빈 원장" loading="lazy"></div>
+          <p class="collage-cap">· 은빈 원장 <span class="arrow">→</span></p>
+        </a>
+        <a class="collage-item a" href="#" data-modal="designer" data-name="유림" data-role="원장" data-booking="https://m.booking.naver.com/booking/13/bizes/43073/items/1506737?area=pll&amp;lang=ko&amp;theme=place">
+          <div class="collage-photo"><img src="images/designers/유림.png" alt="유림 원장" loading="lazy"></div>
+          <p class="collage-cap">· 유림 원장 <span class="arrow">→</span></p>
+        </a>
+        <a class="collage-item a" href="#" data-modal="designer" data-name="채은" data-role="원장" data-booking="https://m.booking.naver.com/booking/13/bizes/43073/items/1506738?area=pll&amp;lang=ko&amp;theme=place">
+          <div class="collage-photo"><img src="images/designers/채은.png" alt="채은 원장" loading="lazy"></div>
+          <p class="collage-cap">· 채은 원장 <span class="arrow">→</span></p>
+        </a>
+        <a class="collage-item a" href="#" data-modal="designer" data-name="유정" data-role="원장" data-booking="https://m.booking.naver.com/booking/13/bizes/43073/items/1506732?area=pll&amp;lang=ko&amp;theme=place">
+          <div class="collage-photo"><img src="images/designers/유정.png" alt="유정 원장" loading="lazy"></div>
+          <p class="collage-cap">· 유정 원장 <span class="arrow">→</span></p>
+        </a>
+        <a class="collage-item a" href="#" data-modal="designer" data-name="세나" data-role="디자이너" data-booking="https://m.booking.naver.com/booking/13/bizes/43073/items/6968597?area=pll&amp;lang=ko&amp;theme=place">
+          <div class="collage-photo"><img src="images/designers/세나.png" alt="세나 디자이너" loading="lazy"></div>
+          <p class="collage-cap">· 세나 디자이너 <span class="arrow">→</span></p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 06 시술사진 ================= -->
+  <section class="gallery">
+    <div class="container" style="padding:56px 22px 24px;">
+      <p class="mag-label" style="text-align:center; margin-bottom:8px;">GALLERY</p>
+      <h2 class="kr-title" style="text-align:center; font-size:24px;">시그니처 스타일</h2>
+    </div>
+    <div class="style-grid">
+      <!-- ⚠️ TODO: 항목 추가 시 이 블록을 그대로 복사해서 늘리면 됩니다 -->
+      <a class="style-item" href="#" data-lightbox data-style-name="허쉬컷" data-desc="높은 층과 가벼운 끝 질감으로 슬림하고 자유로운 실루엣을 표현하는 커트" data-recommend="모발의 무게감을 줄이고 얼굴선을 자연스럽게 보완하고 싶은 고객">
+        <img src="images/styles/1.jpg" alt="허쉬컷" loading="lazy">
+        <p class="style-cap">허쉬컷</p>
+      </a>
+      <a class="style-item" href="#" data-lightbox data-style-name="구름펌" data-desc="굵고 느슨한 웨이브가 겹치며 폭신한 볼륨과 부드러운 흐름을 만드는 펌" data-recommend="강한 컬은 부담스럽지만 전체적인 볼륨과 풍성함을 원하는 고객">
+        <img src="images/styles/2.jpg" alt="구름펌" loading="lazy">
+        <p class="style-cap">구름펌</p>
+      </a>
+      <a class="style-item" href="#" data-lightbox data-style-name="레이어드펌" data-desc="층을 따라 컬이 연결되어 볼륨과 입체적인 움직임이 살아나는 스타일" data-recommend="모발이 축 처지거나 긴 머리의 밋밋함을 개선하고 싶은 고객">
+        <img src="images/styles/3.png" alt="레이어드펌" loading="lazy">
+        <p class="style-cap">레이어드펌</p>
+      </a>
+      <a class="style-item" href="#" data-lightbox data-style-name="태슬컷" data-desc="직선적인 단발 라인과 가볍게 떨어지는 끝 질감이 특징인 커트" data-recommend="깔끔하고 세련된 단발과 선명한 실루엣을 원하는 고객">
+        <img src="images/styles/4.png" alt="태슬컷" loading="lazy">
+        <p class="style-cap">태슬컷</p>
+      </a>
+      <a class="style-item" href="#" data-lightbox data-style-name="딥레드브라운" data-desc="깊은 브라운에 와인빛 레드를 더해 차분하면서도 선명한 색감과 모발의 윤기를 강조하는 컬러" data-recommend="밝은 컬러보다 깊고 고급스러운 분위기를 선호하거나, 실내에서는 차분하고 빛에서는 은은한 레드감이 드러나는 컬러를 원하는 고객">
+        <img src="images/styles/5.png" alt="딥레드브라운" loading="lazy">
+        <p class="style-cap">딥레드브라운</p>
+      </a>
+      <a class="style-item" href="#" data-lightbox data-style-name="C컬펌" data-desc="모발 끝에 C자 컬을 넣어 라인을 정돈하고 자연스러운 볼륨을 만드는 펌" data-recommend="끝이 뻗치거나 매일 드라이·고데기하는 것이 번거로운 고객">
+        <img src="images/styles/6.png" alt="C컬펌" loading="lazy">
+        <p class="style-cap">C컬펌</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- ================= 07 고객리뷰 ================= -->
+  <section class="reviews-mag">
+    <div class="section-sub">
+      <span class="mag-label">REVIEW</span>
+      <h2 class="kr-title">고객 후기</h2>
+    </div>
+    <div class="review-scroll">
+      <div class="review-card">
+        <div class="review-stars">★★★★★<span class="review-source">GOOGLE</span></div>
+        정말 친절하셨고 시술 과정 하나하나 세심하게 신경 써주셔서 정말 만족스러웠어요. 원장님이 추천해주신 스타일도 저한테 딱 잘 어울렸습니다. 처음부터 끝까지 기분 좋게 받을 수 있었어요. 다음에도 꼭 다시 방문하고 싶어요 💗 별 10개 드리고 싶을 만큼 만족했습니다! ⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        오랜 단골입니다.<br>늘 어두운 머리를 하다 오늘은 Personal color 염색했어요.<br>찰떡 같은 색으로 머릿결도 손상없이 이쁘게 해주셔서 감사합니다 😄
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        5~6년째 은빈원장님께 저포함 아이들까지 모두 관리받고 있어요~ 커트 예술이시고 염색, 펌 모두 너무 잘하셔서 올때마다 기분좋게 관리받고 갑니당~^^
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★<span class="review-source">NAVER</span></div>
+        오늘도 유림원장님께 믿고 맡긴 히피펌 시술💗<br>제가 원하는 스타일에 맞는 시술 설명도 자세하게 해주시고 저보다 더 제 머리 컨디션을 신경써주시는 모습에 만족스러운 시술 받았어요☺️ 매번 신경 많이 써주시고 드라이 팁도 알려주시고! 무엇보다 머리가 너무 맘에 들어서 기분 좋아용❣️<br>쌤도 같이 마음에 들어해주셔서 감사합니다😉
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        믿고 맡기는 ❤️유정원장님❤️<br>셋팅펌, 레이어드펌은 유정원장님입니다!!!!<br>하고싶은 머리를 확실하게 표현을 못하고 여신머리하고싶다고만 했는데 딱 원하시는 포인트 잡아서 원하는대로 제 머리에 맞게 넘 이쁘게 해주셨어요!!!<br>고데기가 아니라 레이어드펌에여❤️
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        여름이라 하이 레이어드 컷으로 부탁드렸는데 얼굴선 맞춰서 너무 예쁘게 잘라주셔서 거울 볼때마다 너무 만족스러워요..♥ 펌도 씨컬이라 머리 감고 말리기만 해도 바로 안으로 쏙쏙 들어와서 얼굴도 작아보이고 목도 길어보이고..!!! 여름에 무거운 긴머리 레이어드로 정리하니까 너무너무 가볍고 시원해요🌊🩵🩵 감사합니다!!!
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 이벤트 (연그레이) ================= -->
+  <section class="event-mag">
+    <div class="section-sub">
+      <span class="mag-label">EVENT</span>
+      <h2 class="kr-title">이벤트</h2>
+    </div>
+    <div class="event-list">
+      <div class="event-card">
+        <span class="event-num">Event 01</span>
+        <h3 class="event-title">주중 모닝 할인</h3>
+        <p class="event-detail">평일 오전 10시~낮 12시 (공휴일 제외)<br>펌·염색 30% 할인 · 커트 10% 할인</p>
+      </div>
+      <div class="event-card">
+        <span class="event-num">Event 02</span>
+        <h3 class="event-title">첫 방문 고객 할인</h3>
+        <p class="event-detail">펌·염색 30% 할인 · 커트 10% 할인<br>N페이 결제 + 포토리뷰 작성 시</p>
+      </div>
+      <div class="event-card">
+        <span class="event-num">Event 03</span>
+        <h3 class="event-title">고객 소개 할인</h3>
+        <p class="event-detail">소개해주신 고객님과 소개받고 첫 방문하신<br>고객님 모두 펌·염색 30% · 커트 10% 할인</p>
+      </div>
+    </div>
+    <p class="event-note">* 중복 할인 불가</p>
+    <div class="event-btn-wrap">
+      <a class="event-btn" href="https://booking.naver.com/booking/13/bizes/43073" target="_blank" rel="noopener">예약하기 →</a>
+    </div>
+  </section>
+
+  <!-- ================= 08 가격표 ================= -->
+  <section class="price-mag" style="border-top:1px solid rgba(26,26,26,.12);">
+    <div class="section-sub">
+      <span class="mag-label">PRICE</span>
+      <h2 class="kr-title">가격 안내</h2>
+    </div>
+    <div class="price-tabs">
+      <button class="price-tab active" data-price-tab="cut">Cut</button>
+      <button class="price-tab" data-price-tab="color">Color</button>
+      <button class="price-tab" data-price-tab="perm">Perm</button>
+      <button class="price-tab" data-price-tab="clinic">Clinic</button>
+    </div>
+    <div class="price-panels">
+      <div class="price-panel active" data-price-panel="cut">
+        <div class="price-row"><span>여성 커트</span><span class="leader"></span><span class="val">28,000~</span></div>
+        <div class="price-row"><span>남성 커트</span><span class="leader"></span><span class="val">25,000~</span></div>
+        <div class="price-row"><span>주니어~고등학생 커트</span><span class="leader"></span><span class="val">25,000~</span></div>
+        <div class="price-row"><span>샴푸</span><span class="leader"></span><span class="val">15,000</span></div>
+        <div class="price-row"><span>앞머리 커트</span><span class="leader"></span><span class="val">7,000</span></div>
+        <div class="price-row"><span>커트+두피스켈링(남성)</span><span class="leader"></span><span class="val">45,000</span></div>
+        <div class="price-row"><span>디자인 드라이</span><span class="leader"></span><span class="val">30,000~</span></div>
+        <div class="price-row"><span>여성 드라이</span><span class="leader"></span><span class="val">28,000~</span></div>
+        <div class="price-row"><span>남성 드라이</span><span class="leader"></span><span class="val">25,000</span></div>
+        <div class="price-row"><span>남성 스타일링</span><span class="leader"></span><span class="val">22,000</span></div>
+        <p class="price-note">* 일부 항목 할인 제외</p>
+      </div>
+      <div class="price-panel" data-price-panel="color">
+        <div class="price-row"><span>디자인 컬러(부분맞춤)</span><span class="leader"></span><span class="val">100,000~</span></div>
+        <div class="price-row"><span>기본 염색(턱선기준)</span><span class="leader"></span><span class="val">90,000~</span></div>
+        <div class="price-row"><span>뿌리 염색(1.5cm 미만)</span><span class="leader"></span><span class="val">70,000</span></div>
+        <div class="price-row"><span>기본 탈색(할인 제외)</span><span class="leader"></span><span class="val">120,000~</span></div>
+        <div class="price-row"><span>뿌리 탈색(1.5cm 미만, 할인 제외)</span><span class="leader"></span><span class="val">100,000</span></div>
+      </div>
+      <div class="price-panel" data-price-panel="perm">
+        <div class="price-row"><span>매직셋팅(믹스펌)</span><span class="leader"></span><span class="val">220,000</span></div>
+        <div class="price-row"><span>볼륨매직</span><span class="leader"></span><span class="val">170,000</span></div>
+        <div class="price-row"><span>셋팅/디지털펌</span><span class="leader"></span><span class="val">160,000</span></div>
+        <div class="price-row"><span>펌+사이드 다운펌</span><span class="leader"></span><span class="val">110,000</span></div>
+        <div class="price-row"><span>기본펌</span><span class="leader"></span><span class="val">90,000</span></div>
+        <p class="price-subnote">부분펌 (할인 제외)</p>
+        <div class="price-row"><span>뿌리매직(뿌리 기준 3cm 미만)</span><span class="leader"></span><span class="val">120,000~</span></div>
+        <div class="price-row"><span>뿌리펌(단독시술)</span><span class="leader"></span><span class="val">80,000</span></div>
+        <div class="price-row"><span>앞머리 열펌</span><span class="leader"></span><span class="val">55,000</span></div>
+        <div class="price-row"><span>앞머리 롤펌</span><span class="leader"></span><span class="val">40,000</span></div>
+        <div class="price-row"><span>사이드 다운펌</span><span class="leader"></span><span class="val">25,000</span></div>
+      </div>
+      <div class="price-panel" data-price-panel="clinic">
+        <div class="price-row"><span>두피헤드스파+모발케어(헤드스파 6종)</span><span class="leader"></span><span class="val">150,000</span></div>
+        <div class="price-row"><span>두피 스케일링(D타입)</span><span class="leader"></span><span class="val">90,000</span></div>
+        <div class="price-row"><span>두피 스케일링(A,B타입)</span><span class="leader"></span><span class="val">90,000</span></div>
+        <div class="price-row"><span>두피케어(3종)</span><span class="leader"></span><span class="val">60,000</span></div>
+        <p class="price-subnote">모발 케어 (할인 제외)</p>
+        <div class="price-row"><span>신데렐라 크리닉</span><span class="leader"></span><span class="val">200,000</span></div>
+        <div class="price-row"><span>부스스한 모발교정</span><span class="leader"></span><span class="val">150,000</span></div>
+        <div class="price-row"><span>모발 크리닉(케어) 3종</span><span class="leader"></span><span class="val">130,000</span></div>
+        <div class="price-row"><span>베이직 크리닉(1종)</span><span class="leader"></span><span class="val">70,000</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 09 오시는 길 ================= -->
+  <section class="map-mag">
+    <div class="section-sub">
+      <span class="mag-label">LOCATION</span>
+      <h2 class="kr-title">오시는 길</h2>
+    </div>
+    <div class="map-box">
+      <!-- Google 지도 임베드(API 키 불필요). 비즈니스 등록명(보그헤어천호역점)으로 검색해 정확한 핀 표시. 클릭 시 실제 이동은 아래 네이버/구글 길찾기 버튼으로 처리 -->
+      <iframe src="https://www.google.com/maps?q=%EB%B3%B4%EA%B7%B8%ED%97%A4%EC%96%B4%EC%B2%9C%ED%98%B8%EC%97%AD%EC%A0%90&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="VOG HAIR 천호역점 위치 지도"></iframe>
+    </div>
+    <div class="info-list">
+      <div class="info-row">
+        <span class="info-label">주소</span>
+        <p class="info-value">서울 강동구 올림픽로 651 예경빌딩 2층<br>천호역 2번 출구에서 50m</p>
+      </div>
+      <div class="info-row">
+        <span class="info-label">영업시간</span>
+        <p class="info-value">화~토 10:00 – 20:00<br>일요일 10:00 – 19:00<br>월요일 정기휴무</p>
+      </div>
+      <div class="info-row">
+        <span class="info-label">전화</span>
+        <p class="info-value">02-475-7966</p>
+      </div>
+      <div class="info-row">
+        <span class="info-label">주차 안내</span>
+        <p class="info-value">타워 주차 이용 시 주차비용 발생 (만차 시 이용 불가)<br>스타벅스·GS25 지나 우회전 후 주황색 봉 치우고 주차해 주세요<br>주차 공간이 넉넉하지 않습니다 · 오전 첫 타임은 항상 주차 가능합니다</p>
+      </div>
+    </div>
+    <a class="btn-direction" href="https://naver.me/x35i9Adp" target="_blank" rel="noopener" style="margin-top:24px;">길찾기 (네이버지도) →</a>
+    <a class="btn-direction" href="https://maps.app.goo.gl/PbZSs4QkNMPo4uFo8" target="_blank" rel="noopener" style="margin-top:10px; border-color:rgba(26,26,26,.4);">길찾기 (구글지도) →</a>
+  </section>
+
+  <!-- ================= 10 FOOTER ================= -->
+  <footer class="mag-footer">
+    <p class="f-brand"><span class="en">VOG HAIR</span> <span class="kr">천호역점</span></p>
+    <div class="f-sns">
+      <!-- ⚠️ TODO: 실제 SNS 링크로 교체 -->
+      <a href="#" aria-label="Instagram">IG</a>
+      <a href="#" aria-label="Telegram">TG</a>
+    </div>
+    <p class="f-copy">© 2026 VOG HAIR 천호역점. All rights reserved.</p>
+    <p class="f-copy" style="margin-top:6px;">⚠️ 사업자정보 확인 후 기재 필요</p>
+  </footer>
+
+  <!-- ================= 디자이너 프로필 모달 ================= -->
+  <div class="overlay" id="designerOverlay">
+    <div class="overlay-panel">
+      <button class="overlay-close" data-close>×</button>
+      <div class="overlay-photo"><img id="modalPhoto" src="" alt=""></div>
+      <h3 id="modalName">[디자이너명]</h3>
+      <p class="overlay-role" id="modalRole">Designer</p>
+      <div id="modalBody"></div>
+      <a class="modal-book-btn" id="modalBooking" href="#" target="_blank" rel="noopener">예약하기 →</a>
+    </div>
+  </div>
+
+  <!-- ================= 시술사진 라이트박스 ================= -->
+  <div class="overlay" id="lightboxOverlay">
+    <div class="overlay-panel lightbox-panel">
+      <button class="overlay-close" data-close>×</button>
+      <div class="overlay-photo placeholder-img" id="lightboxPhoto">PHOTO</div>
+      <h3 id="lightboxName">스타일명</h3>
+      <div class="fit-row">
+        <span class="fit-label">스타일 설명</span>
+        <p id="lightboxDesc">-</p>
+      </div>
+      <div class="fit-row">
+        <span class="fit-label">추천 고객</span>
+        <p id="lightboxRecommend">-</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+<script>
+  (function(){
+    var dModal = document.getElementById('designerOverlay');
+    var lBox = document.getElementById('lightboxOverlay');
+
+    var profiles = {
+      "도하": '<p class="p-msg">스타일을 넘어, 당신이라는 브랜드를 완성합니다.<br>보여지는 이미지는 우연이 아니라 정교하게 설계된 결과입니다.<br>고객 한 사람만의 분위기와 인상을 분석하고, 가장 어울리는 스타일을 구조적으로 디자인합니다.<br>단순한 커트와 컬러, 펌이 아닌 이미지의 방향성과 완성도를 고려한 전문적인 설계가 이루어집니다.<br>선호가 아닌 이유율, 트렌드가 아닌 기준으로.<br>더 깨끗하고, 더 정제된 인상으로 당신의 이미지를 새롭게 정의합니다.</p>' +
+        '<p class="p-section-title">Profile</p>' +
+        '<ul><li>여성기업 대표</li><li>헤어 비즈니스 교육 전문가</li><li>NCS 확인 강사</li><li>VOG 아카데미 강사</li><li>퍼스널컬러 1급 자격</li><li>이미지메이킹 자격</li><li>뷰티디자인 전공</li><li>종합면허증 보유</li></ul>' +
+        '<p class="p-section-title">Education &amp; Career</p>' +
+        '<ul><li>Sassoon Academy UK, London</li><li>T.D.T.C Cut Instructor Course</li><li>Mark Hayes 1:1 Coaching</li><li>JoltNaige 1:1 Coaching</li><li>Sassoon Scholarship Cut Contest</li><li>2024 UK Sassoon (Japan) Hair Show 서울 대표</li><li>Sassoon Foundation</li><li>Pivot Point Cut</li><li>Japan Peekaboo Cut</li></ul>' +
+        '<p class="p-section-title">Works</p>' +
+        '<ul><li>이상봉 디자이너 패션쇼 헤어스타일링</li><li>빈중철 디자이너 솔릭스튜디오 패션쇼 헤어스타일링</li><li>모델 코리아 Art Team 디자이너</li><li>Vog Art Team 활동</li></ul>' +
+        '<p class="p-closing">당신의 기준이 되는 스타일, 그 시작을 함께합니다.</p>',
+
+      "주영": '<p class="p-tags">[여성레이어드컷/허쉬컷/보브컷/떠슬컷 단발전문]</p>' +
+        '<p class="p-msg">풍부한 경험과 전문성을 통해 여러분의 헤어 스타일을 완벽하게 책임지겠습니다<br><br>압구정 갤러리아 백화점 패션쇼 헤어 담당, 서경대 패션 졸업작품 헤어 담당, 영화 촬영 헤어 담당 이력을 바탕으로, 스타일의 차이를 직접 느껴보세요.</p>' +
+        '<p class="p-awards">-경력 20년 노하우로 재방률 1위 (장기근속10년차)<br>-만족도 1위<br>-최다 방문 고객수 330명<br>-1:1 컨설팅맞춤디자인*엘범전문*</p>' +
+        '<p class="p-awards">[2018~2023년 best 디자이너 선정]</p>' +
+        '<ul><li>사순(영국)커트 교육 수료</li><li>퍼스널컬러 교육 수료</li><li>디플로마 컬러 교육 수료</li><li>UK SASSOON SCHOOLSHIP Seminer &amp; Wookshpo in seoul</li><li>Sasson Way Salon haircut-foundation</li><li>LOREAL Color Diploma</li><li>MILBON Color Diploma</li><li>KERASTASE Head-Spa Diploma</li></ul>' +
+        '<p class="p-closing">단점을 장점으로 바꿔주는 헤어스타일로 당신을 주인공으로 만들어드리겠습니다.</p>',
+
+      "은빈": '<p class="p-tags">[레이어드컷/빌드펌/쉐도우펌] [인생머리 종결자]</p>' +
+        '<p class="p-awards">재방률99%<br>소개/네이버예약률 1위</p>' +
+        '<p class="p-msg">후회없는 선택 !!! 1:1 맞춤 디자인으로 최고의 만족도와 행복한 에너지까지 선물해드리겠습니다</p>' +
+        '<p class="p-awards">[네이버가 선정한 천호미용실 인기스타일리스트 선정]<br>[2022년 한국소비자평가 KCA 최우수 헤어디자이너 선정]<br>[2023-2022년 VOG HAIR 베스트 디자이너 선정]</p>' +
+        '<ul><li>퍼스널 컬러 교육 이수</li><li>Head-Spa (두피케어) master</li><li>영국 사순커트 수료</li><li>UK SASSOON SCHOOLSHIP Seminer &amp; Workshop in seoul</li><li>Mark Hayes Hair Seminar LOOK&amp;LEARN in SEOUL, KOREA</li><li>THE 25th SASSOON SCHOOLSHIP STUDENT HAIR CUT CONTEST/HAIR SEMINAR &amp; SHOW 2024</li><li>Sasson Way Salon haircut-foundation</li><li>DEMI Color Diploma</li><li>LOREAL Color Diploma</li><li>Bofs Mans Cut Complete</li><li>KERASTASE Head-S pa Diploma</li></ul>',
+
+      "유림": '<div class="p-promo"><strong>[HOT] 단발 감성펌(너펌/빈티지펌) + 프리미엄 컬 무스 증정 패키지</strong><br><span class="price-old">205,000원</span><span class="price-new">143,500원 (30% 할인)</span><br>분위기 전환 단발 펌 + 손질을 편하게 도와주는 제품 컬 무스 증정</div>' +
+        '<p class="p-tags">[레이어드펌/불륨매직/허쉬컷/남자펌라매]</p>' +
+        '<p class="p-msg">마음을 나누며 웃음을 주는 헤어 디자이너 유림입니다<br>고객님의 니즈를 잘 파악하며 매일 거울을 보며 기분이 좋아지는 디자인으로 컨설팅 헤드리겠습니다</p>' +
+        '<p class="p-awards">[2022-2023년 VOG HAIR 베스트디자이너 선정]<br>-강동구 미용실 인기스타일리스트선정<br>월 평균 고객 수 250명 이상 시술</p>' +
+        '<ul><li>퍼스널컬러 수료</li><li>헤드스파(두피케어) 마스터 수료</li><li>브랜드(데미.로레알 등) 컬러 디플로마 수료</li><li>사순(영국) 컷트 교육 수료</li><li>Mark Hayes Hair Seminar in SEOUL, KOREA</li><li>THE 25th SASSOON SCHOOLSHIP STUDENT HAIR CUT CONTEST -HAIR SEMINAR &amp; SHOW 2024</li><li>UK SASSOON SCHOOLSHIP Seminer &amp; Wookshpo in seoul</li><li>Sasson Way Salon haircut-foundation</li><li>LOREAL Color Diploma</li><li>MILBON Color Diploma</li><li>KERASTASE Head-Spa Diploma</li></ul>' +
+        '<p class="p-closing">두상과 얼굴형에 맞는 디자인을 선사헤드리겠습니다!</p>',
+
+      "채은": '<p class="p-tags">[레이어드컷/레이어드펌 /cs컬펌 /여성헤어스타일전문]</p>' +
+        '<p class="p-msg">찾지 못한 2%의 아름다움까지 스타일링으로 선사해드리겠습니다</p>' +
+        '<p class="p-awards">[2022년 한국소비자평가 KCA 최우수 헤어디자이너 선정]<br>[2023-2022년 VOG HAIR 베스트 디자이너 선정]</p>' +
+        '<ul><li>Mark Hayes Hair Seminar Look&amp;LEARN in SEOUL, KOREA</li><li>THE 25th SASSOON SCHOOLSHIP STUDENT HAIR CUT CONTEST -HAIR SEMINAR &amp; SHOW 2024</li><li>UK SASSOON SCHOOLSHIP Seminer &amp; Wookshpo in seoul</li><li>Sasson Way Salon haircut-foundation Diploma</li><li>personal color Diploma</li><li>DEMI color Diploma</li><li>LOREAL color Diploma</li><li>두피 모발 케어리스트 교육 이수</li></ul>' +
+        '<p class="p-msg">하나하나 섬세하게 장점은 살리고 단점은 보완할 수 있는 스타일과 고객님의 숨어있는 미를 최고의 기술로 찾아드리겠습니다.</p>' +
+        '<p class="p-closing">고객님의 입장에서 항상 생각하는 초심의 실장 채은을 찾아주세요</p>',
+
+      "유정": '<p class="p-tags">[레이어드컷/중단발펌/하이레이어드컷/레이어드펌/커트마법사 전문]</p>' +
+        '<p class="p-msg">단골 고객층 탄탄한 한 번 시술 받아보면 다시 찾아가고 싶은 디자이너<br>1:1 얼굴형 맞춤 레이어드 디자인<br>유정 원장님의 시그니처는 중단발 기장, 롱헤어 기장 레이어드 디자인</p>' +
+        '<p class="p-msg">삐쭉거리는 레이어드가 아닌 고객님들이 원하는, 손질 편한 감성 레이어드컷트로 헤어손질이 어려운 분들도 만족도 99.9%</p>' +
+        '<p class="p-awards">모질맞춤 여성펌 전문 1등<br>월 평균 250명 이상</p>' +
+        '<p class="p-msg">퍼스널 컬러, 퍼스널 스타일을 찾고 신소원들 맞춤상담으로 고객님들의 헤어고민을 마법사처럼 해결해드립니다.</p>' +
+        '<p class="p-awards">VOG HAIR 베스트 탑 스타일리스트</p>' +
+        '<ul><li>UK SASSOON SCHOOLSHIP Seminer &amp; Wooksh po in seoul</li><li>Sasson Way Salon haircut-foundation</li><li>LOREAL Color Diploma</li><li>MILBON Color Diploma</li><li>KERASTASE Head-Spa Diploma</li><li>사순(영국) 커트 수료</li><li>두피 헤드스파 마스터</li></ul>',
+
+      "세나": '<p class="p-msg">안녕하세요, 디자이너 세나입니다.<br>빠르게 끝내기보다, 고객님께 가장 잘 어울리는 스타일을 찾는데 집중합니다.<br>작은 디테일도 놓치지 않고 깔끔하고 오래 유지되는 커트를 헤드리기 위해 정성을 다하고 있습니다.</p>' +
+        '<p class="p-msg">처음이셔도 편하게 방문해 주세요 :)</p>' +
+        '<ul><li>VOG 아카데미 사순(SASSOON) 웨이 살롱 헤어어드밴스 과정 수료</li><li>맨즈커트 수료</li><li>두피 스켈핑 마스터</li><li>모발 케어 마스터</li><li>사순 UK (SASSOON) ABC컷 이수</li><li>컬러 테크닉 마스터</li></ul>'
+    };
+
+    document.querySelectorAll('[data-modal="designer"]').forEach(function(el){
+      el.addEventListener('click', function(e){
+        e.preventDefault();
+        var name = el.dataset.name || '[디자이너명]';
+        document.getElementById('modalName').textContent = name;
+        document.getElementById('modalRole').textContent = el.dataset.role || 'Designer';
+        document.getElementById('modalBooking').href = el.dataset.booking || '#';
+        document.getElementById('modalBody').innerHTML = profiles[name] || '';
+        var photoImg = el.querySelector('.collage-photo img');
+        var modalPhoto = document.getElementById('modalPhoto');
+        modalPhoto.src = photoImg ? photoImg.src : '';
+        modalPhoto.alt = name + ' 디자이너';
+        dModal.classList.add('open');
+        dModal.querySelector('.overlay-panel').scrollTop = 0;
+      });
+    });
+
+    document.querySelectorAll('[data-lightbox]').forEach(function(el){
+      el.addEventListener('click', function(e){
+        e.preventDefault();
+        document.getElementById('lightboxName').textContent = el.dataset.styleName || '';
+        document.getElementById('lightboxDesc').textContent = el.dataset.desc || '-';
+        document.getElementById('lightboxRecommend').textContent = el.dataset.recommend || '-';
+        var srcImg = el.querySelector('img');
+        var lbPhoto = document.getElementById('lightboxPhoto');
+        if(srcImg){
+          lbPhoto.classList.remove('placeholder-img');
+          lbPhoto.innerHTML = '<img src="' + srcImg.src + '" alt="' + (el.dataset.styleName || '') + '">';
+        } else {
+          lbPhoto.classList.add('placeholder-img');
+          lbPhoto.innerHTML = 'PHOTO';
+        }
+        lBox.classList.add('open');
+      });
+    });
+
+    document.querySelectorAll('[data-close]').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        btn.closest('.overlay').classList.remove('open');
+      });
+    });
+
+    [dModal, lBox].forEach(function(ov){
+      ov.addEventListener('click', function(e){
+        if(e.target === ov) ov.classList.remove('open');
+      });
+    });
+
+    document.querySelectorAll('[data-price-tab]').forEach(function(tab){
+      tab.addEventListener('click', function(){
+        var key = tab.dataset.priceTab;
+        document.querySelectorAll('[data-price-tab]').forEach(function(t){ t.classList.remove('active'); });
+        document.querySelectorAll('[data-price-panel]').forEach(function(p){ p.classList.remove('active'); });
+        tab.classList.add('active');
+        document.querySelector('[data-price-panel="' + key + '"]').classList.add('active');
+      });
+    });
+  })();
+</script>
+</body>
+</html>
