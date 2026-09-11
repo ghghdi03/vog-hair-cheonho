@@ -91,12 +91,17 @@
   .hero-photo img{width:100%; height:100%; object-fit:cover;}
   .hero-photo-cap{
     position:absolute; left:0; right:0; bottom:0; z-index:1; margin:0;
-    padding:32px 24px 18px;
-    background:linear-gradient(180deg, rgba(20,17,14,0) 40%, rgba(20,17,14,.72) 100%);
+    padding:28px 20px 16px;
+    background:linear-gradient(180deg, rgba(20,17,14,0) 35%, rgba(20,17,14,.74) 100%);
     color:#fff; text-align:center;
   }
-  .hero-photo-cap .hpc-title{font-size:12px; font-weight:700; letter-spacing:.02em; line-height:1.6; margin-bottom:8px;}
-  .hero-photo-cap .hpc-body{font-size:10.5px; color:rgba(255,255,255,.82); line-height:1.75; max-width:36ch; margin:0 auto;}
+  .hero-photo-cap .hpc-title{font-size:12px; font-weight:700; letter-spacing:.02em; line-height:1.55; margin-bottom:8px; word-break:keep-all;}
+  .hero-photo-cap .hpc-body{font-size:10px; color:rgba(255,255,255,.82); line-height:1.65; max-width:36ch; margin:0 auto; word-break:keep-all;}
+  @media(min-width:600px){
+    .hero-photo-cap{padding:36px 28px 22px;}
+    .hero-photo-cap .hpc-title{font-size:13px;}
+    .hero-photo-cap .hpc-body{font-size:11px; max-width:40ch;}
+  }
   .hero-text{padding:32px 22px 48px; text-align:center; background:var(--white);}
   .hero-text h1{font-size:clamp(30px,8vw,44px); line-height:1.15; margin-bottom:4px;}
   .hero-text h1.ko{font-size:clamp(22px,6vw,30px); margin-bottom:18px; color:var(--ink);}
@@ -331,8 +336,8 @@
     <div class="hero-photo">
       <img src="images/hero.png" alt="VOG HAIR 천호역점" loading="eager">
       <div class="hero-photo-cap">
-        <p class="hpc-title">강동구 천호동 헤어살롱, Color Your Life — VOG HAIR</p>
-        <p class="hpc-body">VOG HAIR 천호역점은 서울 강동구 천호동에 위치한 프리미엄 헤어살롱으로, 커트·염색·펌부터 헤드스파까지 섬세한 디자인을 제공합니다.<br>서울 강동구 올림픽로 651 예경빌딩 2층 · 천호역 2번 출구 도보 1분(50m)</p>
+        <p class="hpc-title">강동구 천호동 헤어살롱<br>Color Your Life — VOG HAIR</p>
+        <p class="hpc-body">보그헤어 천호역점은 서울 강동구 천호동에 위치한 프리미엄 헤어살롱으로, 커트·염색·펌부터 헤드스파까지 섬세한 디자인을 제공합니다.<br>서울 강동구 올림픽로 651 예경빌딩 2층<br>천호역 2번 출구 도보 1분(50m)</p>
       </div>
     </div>
     <div class="hero-text">
